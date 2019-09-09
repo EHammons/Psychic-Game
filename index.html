@@ -13,43 +13,6 @@
     <h3>Loses: <span id="losses-text"></span></h3>
     <h3>Guesses Left: <span id="left-text"></span></h3>
     <h3>Your Guesses so far: <span id="guesses-text"></span></h3>
-
-    <script type="text/javascript">
-
-        var computerChoices = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-
-        var wins = 0;
-        var losses = 0;
-        var guessesLeft = 9;
-
-        var winsText = document.getElementById("wins-text");
-        var lossesText = document.getElementById("losses-text")
-        var leftText = document.getElementById("left-text");
-
-        winsText.textContent = wins;
-        lossesText.textContent = losses;
-        leftText.textContent = guessesLeft;
-
-
-        var newGuess = function() {
-            computerChoices[Math.floor(Math.random()*computerChoices.length)];
-        }
-
-        var computerGuess = newGuess;
-        console.log(computerGuess);
-
-        document.onkeyup = function(event) {
-            var userGuess = event.key;
-
-            if (userGuess.toUpperCase() === computerGuess) {
-                wins++;
-            } else if (guessesLeft > 0) {
-                guessesLeft--;
-            } else {
-                losses++;
-            }
-        }
-    
-    </script>
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>
